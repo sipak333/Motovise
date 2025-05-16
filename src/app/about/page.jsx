@@ -1,7 +1,6 @@
 import { getPageContent } from '@/app/lib/wordpress';
 
 export default async function AboutPage() {
-  // Use the page slug or path as defined in WordPress. Example: '/about' or 'about'
   const page = await getPageContent('about');
 
   if (!page) return <p>About page not found.</p>;

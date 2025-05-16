@@ -4,8 +4,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-schibsted-grotesk: 'Schibsted Grotesk', sans-serif;
-  --font-dmserif-text: 'DM Serif Text', serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-dmsans: 'DM Sans', serif;
 }
 
 @theme inline {
@@ -26,9 +26,18 @@ body {
 }
 
 h1,h2,h3,h4{
-  font-family: var(--font-dmserif-text);
+  font-family: var(--font-poppins);
+}
+
+h1,h2{
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(#262626,#B8C2CE);
+  background-clip: text;
+  color: transparent;
 }
 
 .postContent p{
   padding: 5px 0;
 }
+

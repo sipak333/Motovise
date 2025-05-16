@@ -69,3 +69,22 @@ export async function getPostBySlug(slug) {
   `, { slug });
   return data.post;
 }
+
+
+export async function getCategory() {
+  const data = await fetchAPI(`
+    {
+      categories {
+        nodes {
+          name
+          uri
+          categoryImage
+          slug
+          count
+        }
+      }
+    }
+
+  `);
+  return data.categories.nodes || [];
+}
