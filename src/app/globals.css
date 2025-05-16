@@ -2,6 +2,7 @@
 @import url('https://sonastudio.in/blog/wp-includes/css/dist/block-library/style.min.css');
 
 :root {
+  --primary: #262626;
   --background: #ffffff;
   --foreground: #171717;
   --font-poppins: 'Poppins', sans-serif;
@@ -29,7 +30,7 @@ h1,h2,h3,h4{
   font-family: var(--font-poppins);
 }
 
-h1,h2{
+h1,h3{
   font-weight: bold;
   text-transform: uppercase;
   background: linear-gradient(#262626,#B8C2CE);
@@ -41,3 +42,8 @@ h1,h2{
   padding: 5px 0;
 }
 
+h2{
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 20px;
+}

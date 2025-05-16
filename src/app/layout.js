@@ -4,7 +4,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 
 const dmSans = DM_Sans({ weight: '400', subsets: ['latin'], variable: '--font-dm-sans' });
-const poppins = Poppins({ weight: ['400', '700'], subsets: ['latin'], variable: '--font-poppins' });
+const poppins = Poppins({ weight: ['400', '600' , '700'], subsets: ['latin'], variable: '--font-poppins' });
 
 export default function RootLayout({ children }) {
   return (

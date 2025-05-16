@@ -6,7 +6,8 @@ export default async function Category() {
 
     return (
         <section className="py-[80px]">
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <h2 className="text-[32px]">Category</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {categoryItems.slice(0, 4).map((item, index) => (
                     <div
                         key={index}
@@ -14,10 +15,10 @@ export default async function Category() {
                             index % 2 === 0 ? 'flex-col' : 'flex-col-reverse'
                         } gap-4 items-center`}
                     >
-                        <div className="category__title w-full h-full flex items-center justify-center text-center py-4 bg-[#f2f2f2] rounded">
-                            <h2 className="text-4xl max-w-[270px]">
+                        <div className="category__title w-full h-full flex items-center justify-center text-center py-10 bg-[#EBEEF3] rounded-md">
+                            <h3 className="text-4xl max-w-[270px]">
                                 {item.name}
-                            </h2>
+                            </h3>
                         </div>
 
                         {item.categoryImage && (
@@ -26,7 +27,7 @@ export default async function Category() {
                                 alt={item.name}
                                 width={400}
                                 height={300}
-                                className="rounded w-full h-auto"
+                                className="rounded-md w-full h-auto"
                             />
                         )}
                     </div>

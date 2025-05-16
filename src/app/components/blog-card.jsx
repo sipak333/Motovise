@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function BlogCard({ post }) {
   return (
-    <div className="p-4 border rounded">
+    <div className="p-4 border rounded-md">
       {post.featuredImage?.node?.sourceUrl && (
         <img src={post.featuredImage.node.sourceUrl} alt="" className="mb-4" />
       )}
