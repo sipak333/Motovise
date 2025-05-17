@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ['sonastudio.in'],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'sonastudio.in',
       },
+    ],
+  },
 };
 
 export default nextConfig;
