@@ -40,6 +40,11 @@ export async function getAllPosts() {
           title
           excerpt
           date
+           author {
+            node {
+              name
+            }
+          }
           featuredImage {
             node {
               sourceUrl
@@ -87,4 +92,32 @@ export async function getCategory() {
 
   `);
   return data.categories.nodes || [];
+}
+
+export async function getCategoryBySlug(slug) {
+  const data = await fetchAPI(`
+    query CategoryBySlug($slug: ID!) {
+      category(id: $slug, idType: SLUG) {
+        name
+        slug
+        uri
+        categoryImage
+        description
+        posts {
+          nodes {
+            title
+            slug
+            excerpt
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+          }
+        }
+      }
+    }
+  `, { slug });
+
+  return data?.category;
 }

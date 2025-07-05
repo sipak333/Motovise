@@ -1,18 +1,19 @@
 import Link from 'next/link';
 
 export default function BlogCard({ post }) {
+  const placeholderImage = '/images/placeholder.png';
+  const imageUrl = post.featuredImage?.node?.sourceUrl || placeholderImage;
   return (
     <div className="blog_card--container mx-auto w-full">
       <div className="blog_card flex gap-6 rounded-md border p-4 shadow-lg hover:shadow-xl transition-all duration-300">
         {/* Thumbnail */}
         <div className="blog_card--thumbnail w-[350px] h-[220px] flex-shrink-0">
-          {post.featuredImage?.node?.sourceUrl && (
+          
             <img
-              src={post.featuredImage.node.sourceUrl}
+              src={imageUrl}
               alt={post.title}
               className="w-full h-full object-cover rounded-md"
             />
-          )}
         </div>
 
         {/* Content */}

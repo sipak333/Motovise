@@ -3,7 +3,13 @@ export default function HeroSection  ()  {
         <>
         <section className="hero flex flex-col lg:flex-row justify-between gap-8">
             {/* Hero Content */}
-            <div className="hero__content flex-1">
+            <div className="hero__content relative flex-1">
+               <img
+                  src="/images/engine.png"
+                  alt="engine"
+                  className="absolute top-20 left-[-40px] w-auto h-[350px] object-contain pointer-events-none z-0"
+                />
+
               <h1 className="hero__title text-4xl sm:text-5xl lg:text-7xl font-extrabold uppercase max-w-full lg:max-w-[800px] bg-gradient-to-b from-[#262626] to-[#B8C2CE] bg-clip-text text-transparent">
                 Built for <br />Speed, Styled <br />for Show
               </h1>
@@ -32,7 +38,7 @@ export default function HeroSection  ()  {
             {/* Hero Cards */}
             <div className="hero__cards space-y-4 lg:space-y-0">
             {/* Today Tag (Outside flex) */}
-            <span className="tag bg-[#E1E8F0] text-[#9ea4ac] w-fit sm:w-[100px] text-center px-3 py-2 rounded-md block mb-2">
+            <span className="tag bg-[#E1E8F0] text-[#9ea4ac] w-fit sm:w-[100px] text-center px-3 py-2 rounded-md block mb-4">
               Today
             </span>
 

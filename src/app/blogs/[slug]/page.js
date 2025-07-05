@@ -3,6 +3,8 @@ import { getPostBySlug } from '../../lib/wordpress';
 
 export default async function BlogPostPage({ params }) {
   const post = await getPostBySlug(params.slug);
+  const placeholderImage = '/images/placeholder.png';
+  const imageUrl = post.featuredImage?.node?.sourceUrl || placeholderImage;
 
   return (
     <>
@@ -12,7 +14,7 @@ export default async function BlogPostPage({ params }) {
           <h1 className="text-4xl font-bold">{post.title}</h1>
           <div className="w-full h-[400px] relative my-4 rounded-md overflow-hidden">
             <Image
-              src={post.featuredImage?.node?.sourceUrl}
+              src={imageUrl}
               alt={post.title}
               fill
               className="object-cover"

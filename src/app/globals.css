@@ -33,7 +33,7 @@ h1,h2,h3,h4{
 h1,h3{
   font-weight: bold;
   text-transform: uppercase;
-  background: linear-gradient(#262626,#B8C2CE);
+  background: linear-gradient(#262626,#858585);
   background-clip: text;
   color: transparent;
 }
@@ -46,4 +46,12 @@ h2{
   font-weight: 600;
   color: var(--primary);
   margin-bottom: 20px;
+}
+/* Tailwind global or base.css */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }

@@ -2,11 +2,17 @@ import Link from 'next/link';
 
 export default function PageHeader({ title, breadcrumbs = [] }) {
     return (
-        <div className="w-full bg-[#F7F9FC] border-b border-gray-200 py-6 md:py-10 px-4 md:px-10">
+        <div className="breadcrumb w-full text-center bg-[#EBEEF3] py-[60px] rounded-md">
             <div className="max-w-7xl mx-auto">
-                {/* Breadcrumbs */}
-                <nav className="text-sm text-gray-500 mb-2 md:mb-4">
-                    <ol className="flex flex-wrap space-x-2">
+              
+
+                {/* Title */}
+                <h1 className="text-2xl md:text-4xl font-bold text-gray-800">
+                    {title}
+                </h1>
+                  {/* Breadcrumbs */}
+                <nav className="text-sm text-gray-500 mb-2 md:mb-4 text-center">
+                    <ol className="flex flex-wrap space-x-2 justify-center">
                         <li>
                             <Link href="/" className="hover:text-blue-600">Home</Link>
                         </li>
@@ -22,11 +28,6 @@ export default function PageHeader({ title, breadcrumbs = [] }) {
                         ))}
                     </ol>
                 </nav>
-
-                {/* Title */}
-                <h1 className="text-2xl md:text-4xl font-bold text-gray-800">
-                    {title}
-                </h1>
             </div>
         </div>
     );
